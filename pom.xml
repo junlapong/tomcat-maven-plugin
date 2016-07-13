@@ -41,8 +41,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.5</maven.compiler.source>
-    <maven.compiler.target>1.5</maven.compiler.target>
+    <maven.compiler.source>1.6</maven.compiler.source>
+    <maven.compiler.target>1.6</maven.compiler.target>
     <mavenVersion>2.2.1</mavenVersion>
 
     <mavenPluginPluginVersion>3.2</mavenPluginPluginVersion>
@@ -51,7 +51,7 @@
     <surefire.version>2.18.1</surefire.version>
     <failsafe.version>${surefire.version}</failsafe.version>
 
-    <junit.version>4.10</junit.version>
+    <junit.version>4.12</junit.version>
     <it.sleep.time>2000</it.sleep.time>
     <verifier.maven.debug>false</verifier.maven.debug>
     <verifier.debugJvm>false</verifier.debugJvm>
@@ -76,6 +76,7 @@
 
     <tomcat7Version>7.0.70</tomcat7Version>
     <tomcat8Version>8.0.14</tomcat8Version>
+    <!-- <tomcat8Version>8.5.2</tomcat8Version> -->
 
     <!-- to prevent isssues with last apache parent pom -->
     <arguments />
@@ -462,20 +463,19 @@
         <version>${tomcat7Version}</version>
       </dependency>
 
-
       <!-- end tomcat dependencies -->
 
-      <dependency>
-        <groupId>org.apache.tomcat.maven</groupId>
-        <artifactId>tomcat7-war-runner</artifactId>
-        <version>${project.version}</version>
-      </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.maven</groupId>
+            <artifactId>tomcat7-war-runner</artifactId>
+            <version>${project.version}</version>
+        </dependency>
 
-	  <dependency>
-        <groupId>org.apache.tomcat.maven</groupId>
-        <artifactId>tomcat8-war-runner</artifactId>
-        <version>${project.version}</version>
-      </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.maven</groupId>
+            <artifactId>tomcat8-war-runner</artifactId>
+            <version>${project.version}</version>
+        </dependency>
 
       <dependency>
         <groupId>org.apache.maven.plugin-tools</groupId>
